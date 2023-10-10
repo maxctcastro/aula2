@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organização Familiar</title>
+</head>
+<body>
+    <style>
+        
+        h1{
+           text-align: center; }
+        th,td{
+            text-align: center;}
+        .table{
+            border-collapse: collapse;
+            border-style: hidden;
+            margin: 0 auto;}
+        th{
+            background-color: rgba(243, 136, 14, 0.993);}
+        .comun{
+            background-color: yellow;}
+        .filha{
+            background-color: pink;}
+        .pai{
+            background-color: green;}
+        .filho{
+            background-color: blue;}
+        .mae{
+            background-color: red;}
+        .colored-list {
+    list-style: none; /* Remove os marcadores padrão da lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    }
+    
+    .colored-list li {
+    padding-left: 20px; /* Adicione espaço à esquerda para o quadrado */
+    position: relative; /* Define a posição dos elementos filhos como relativa */
+    }
+    .colored-list li::before {
+    content: ""; /* Adicione um conteúdo vazio antes de cada item */
+    width: 10px; /* Largura do quadrado */
+    height: 10px; /* Altura do quadrado */
+    position: absolute; /* Define a posição como absoluta */
+    left: 0; /* Alinha o quadrado à esquerda do item */
+    top: 50%; /* Alinha o quadrado verticalmente no meio do item */
+    transform: translateY(-50%); /* Ajusta verticalmente para o centro do item */
+    }
+    .red::before {                    
+    background-color: red;}
+    .blue::before {
+    background-color: blue;}
+    .green::before {
+    background-color: green;}
+    .pink::before {
+    background-color: pink;}
+    .yellow::before{
+        background-color: yellow;}
+    .Group{
+        width: 20%; /* Largura para mostrar 5 itens por linha */
+        float: left; /* Alinhar os grupos lado a lado */
+        padding-right: 10px; /* Espaço entre os grupos (opcional) */
+        box-sizing: border-box; /* Inclua a largura da borda e o espaço do preenchimento na largura total */
+    }
+    .Group2{
+        width: 20%; 
+        float: left; 
+        padding-left: 300px;
+       }
+    </style>
+    <h2>Membros da Familia</h2>
+    <ul class = "colored-list">
+    <li class = "green">Pai_Vegetariano</li>
+    <li class = "red">Mae_alergica</li>
+    <li class = "blue">Filho adolecente</li>
+    <li class = "pink">Filha 10 anos</li>
+    
+</ul>
+    <h1>Supermercado</h1>
+    <div class="Group">
+    <ul class="colored-list">
+        <li class="green">Arroz</li>
+        <li class="green">Feijao</li>
+        <li class="green">Legumes</li>
+        <li class="blue">Fruta</li>
+        <li class="green">Pão de Sal</li>
+        </ul>
+    </div>
+<div class="Group">
+    <ul class="colored-list">
+        <li class="yellow">Leite</li>
+        <li class="blue">Ovos</li>
+        <li class="yellow">Oleo</li>
+        <li class="yellow">Farinha de Trigo</li>
+        <li class="yellow">Açucar</li>
+    </ul>
+</div>
+        <div class="Group">
+            <ul class="colored-list">
+                <li class="yellow">Sal</li>
+                <li class="yellow">Alho</li>
+                <li class="red">Pimenta</li>
+                <li class="red">Paprica Doce</li>
+                <li class="blue">Carne de panela</li>
+            </ul>
+        </div>
+        <div class="Group">
+            <ul class="colored-list">
+                <li class="blue">Frango</li>
+                <li class="red">Peixe frito</li>
+                <li class="red">Linguiça assada</li>
+                <li class="yellow">Mandioca Cozida</li>
+                <li class="yellow">Batata Frita</li>
+            </ul>
+        </div>
+        <div class="Group">
+            <ul class="colored-list">
+                <li class="red">salpicão</li>
+                <li class="pink">macarrão a bolonhesa</li>
+                <li class="yellow">macarrão alho e oleo</li>
+                <li class="pink">Lasanha de Frango</li>
+                <li class="green">Pizza 4 Queijos</li>
+            </ul>
+        </div>
+        
+    <h1>Cardapio Semanal</h1>
+    <table class="table" border="1">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Segunda</th>
+                <th>Terça</th>
+                <th>Quarta</th>
+                <th>Quinta</th>
+                <th>Sexta</th>
+                <th>Sabado</th>
+                <th>Domingo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="comun">
+                <th>Cafe da Manhã</th>
+                <td>Pao de sal + Leite</td>
+                <td>Bolo + Cafe</td>
+                <td>Misto quente + suco</td>
+                <td>Vitamina de fruta</td>
+                <td>Leite + bolo</td>
+                <td colspan="2">Ovos mexidos e refrigerante</td>
+                
+            </tr>
+            <tr>
+                <th rowspan="2">Almoço</th>
+                <td class="pai">Arroz,Feijao, Batata e ovo</td>
+                <td class="filha">Arroz + Lasanha de frango</td>
+                <td class="pai">Arroz, Feijão, legumes e batata</td>
+                <td class="mae">Arroz, feijao e salpicão</td>
+                <td class="mae">Arroz, peixe frito e batata</td>
+                <td class="pai">Arroz, feijao, legumes e macarrão</td>
+                <td class="filho">Arroz, batata, mandioca e Linguiça</td>
+            </tr>
+            <tr>
+                
+                <td class="filha">Macarrão a bolonhesa</td>
+                <td class="pai">macarrão alho e oleo, arroz e feijão</td>
+                <td class="filho">Arroz, feijao e Linguiça assada</td>
+                <td class="pai">Arroz, Legumes e ovo</td>
+                <td class="pai">Arroz, feijao, legumes e batata</td>
+                <td class="filha">Arroz, feijao, macarrão a bolonhesa</td>
+                <td class="pai">Arroz, sulfle de legumes e batata</td>
+            </tr>
+            <tr class="comun">
+                <th>Lanche</th>
+                <td>Bolo + cafe</td>
+                <td>Suco + misto quente</td>
+                <td>Vitamina de fruta</td>
+                <td>Leite + pao com manteiga</td>
+                <td>Suco + bolo</td>
+                <td colspan="2">salgadinho + refrigerante</td>
+                
+            </tr>
+            <tr>
+                <th rowspan="2">Janta</th>
+                <td class="pai">Arroz,Feijao, Batata e ovo</td>
+                <td class="filha">Arroz + Lasanha de frango</td>
+                <td class="pai">Arroz, Feijão, legumes e batata</td>
+                <td class="mae">Arroz, feijao e salpicão</td>
+                <td class="mae">Arroz, peixe frito e batata</td>
+                <td class="pai">Arroz, feijao, legumes e macarrão</td>
+                <td class="filho">Arroz, batata, mandioca e Linguiça</td>
+            </tr>
+            <tr>
+            
+                <td class="filha">Macarrão a bolonhesa</td>
+                <td class="pai">macarrão alho e oleo, arroz e feijão</td>
+                <td class="filho">Arroz, feijao e Linguiça assada</td>
+                <td class="pai">Arroz, Legumes e ovo</td>
+                <td class="pai">Arroz, feijao, legumes e batata</td>
+                <td class="filha">Arroz, feijao, macarrão a bolonhesa</td>
+                <td class="pai">Arroz, sulfle de legumes e batata</td>>
+            </tr>
+        </tbody>
+
+    </table>
+    <h1>Tarefas</h1>
+    <div class="Group2">
+    <ol class = "colored-list">
+        <li class="green">Cozinhar</li>
+        <li class="red">Fazer Compras</li>
+        <li class="blue">Lavar Banheiro</li>
+        <li class="red">Passar Pano na Clasa </li>
+        <li class="blue">Tirar o Lixo</li>
+        </ol>
+    </div>
+    <div class="Group2">
+    <ol class="colored-list">
+        <li class="green">Praticar Esportes</li>
+        <li class="red">Levar a Filha a natação</li>
+        <li class="green">Levar o filho a festa</li>
+        <li class="green">Buscar o filho na festa</li>
+        <li class="red">Ajudar a Filha com o piano</li>
+    </ol>
+</div>
+</body>
+</html>
